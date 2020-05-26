@@ -1,0 +1,5 @@
+#Add all files to be ignored here
+
+.vs/
+bin/
+obj/

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ParticipantRegister.App">
+    <Application.Resources>
+		<ResourceDictionary>
+			<!--Tabbed Page Style-->
+			<Style TargetType="TabbedPage" >
+				<Setter Property="BarBackgroundColor" Value="Orange"></Setter>
+				<Setter Property="BackgroundColor" Value="Orange"></Setter>
+				<Setter Property="BarTextColor" Value="White"
+			</Style>
+	
+			<!--List Style-->
+			<Style TargetType="ListView" x:Key="listStyle">
+				<Setter Property="BackgroundColor" Value="WhiteSmoke"></Setter>
+				<Setter Property="HasUnevenRows" Value="True"></Setter>
+				<Setter Property="AbsoluteLayout.LayoutBounds" Value="0,0,1,1"></Setter>
+				<Setter Property="AbsoluteLayout.LayoutFlags" Value="SizeProportional"></Setter>
+			</Style>
+			
+		</ResourceDictionary>
+    </Application.Resources>
+</Application>

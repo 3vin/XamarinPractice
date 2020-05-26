@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ParticipantRegister.Templates.ParticipantViewCell">
+
+	<Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="100"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="100"></ColumnDefinition>
+			<ColumnDefinition Width="*"></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+
+		<!--Display Image-->
+		<Image Source="{Binding ImageUrl}" Grid.Row="0" Grid.Column="0"/>
+
+		<Grid HorizontalOptions="FillAndExpand"
+			Grid.Row="0" 
+			Grid.Column="1">
+			
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+			</Grid.RowDefinitions>
+		
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+				<ColumnDefinition Width="*"></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+
+			<!--Full Name-->
+			<Label Text="Full Names"
+				   Grid.Row="0" 
+				   Grid.Column="0"></Label>
+			<Label Text="{Binding Name}" 
+				   Grid.Row="0" 
+				   Grid.Column="1"></Label>
+
+			<!--ID Number-->
+			<Label Text="ID Number" 
+				   Grid.Row="1" 
+				   Grid.Column="0" ></Label>
+			<Label Text="{Binding IDNumber}" Grid.Row="1" Grid.Column="1"></Label>
+
+			<!--Address-->
+			<Label Text="Address" 
+				   Grid.Row="2" 
+				   Grid.Column="0"></Label>
+			<Label Text="{Binding Address}" 
+				   Grid.Row="2" 
+				   Grid.Column="1"></Label>
+
+		</Grid>
+		
+	</Grid>
+
+</ViewCell>

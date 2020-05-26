@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:templates ="clr-namespace:ParticipantRegister.Templates"
+			 mc:Ignorable="d"
+             x:Class="ParticipantRegister.Pages.ParticipantListPage">
+
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Text="Add"
+			Clicked="AddParticipent_Button_Clicked">
+		</ToolbarItem>
+	</ContentPage.ToolbarItems>
+	
+	<ContentPage.Content>
+		<AbsoluteLayout>
+
+		<ListView x:Name="participentsListView"
+				  Style="{StaticResource Key=listStyle}">
+
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<templates:ParticipantViewCell></templates:ParticipantViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+			
+		</ListView>
+			
+			<ImageButton 
+				BackgroundColor="SteelBlue" 
+				AbsoluteLayout.LayoutBounds="0.95,0.95,80,80"
+				AbsoluteLayout.LayoutFlags="PositionProportional"
+				CornerRadius="40"
+				HeightRequest="40"
+				Aspect="AspectFit"
+				Source="add.png"
+				Clicked="AddParticipent_Button_Clicked">
+
+			</ImageButton>
+	</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>
